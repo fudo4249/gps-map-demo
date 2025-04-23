@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>用途地域マップ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <style>
     body, html { margin: 0; padding: 0; }
@@ -12,18 +12,20 @@
       position: absolute;
       top: 10px;
       left: 10px;
-      z-index: 1;
       background: rgba(255,255,255,0.9);
       padding: 10px;
       border-radius: 8px;
       font-size: 14px;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
   <div id="controls">
-    <label><input type="checkbox" id="toggle-shinjuku" checked> 新宿エリア</label><br>
-    <label><input type="checkbox" id="toggle-shibuya" checked> 渋谷エリア</label>
+    <label><input type="checkbox" id="toggle-23ku" checked> 23区エリア</label><br>
+    <label><input type="checkbox" id="toggle-jusen" checked> 住専</label><br>
+    <label><input type="checkbox" id="toggle-shougyou" checked> 商業</label><br>
+    <label><input type="checkbox" id="toggle-kougyou" checked> 工業</label><br>
   </div>
   <div id="map"></div>
   <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>

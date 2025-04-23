@@ -20,31 +20,32 @@ const map = new maplibregl.Map({
   zoom: 14
 });
 
-// 現在地取得
-navigator.geolocation.getCurrentPosition(
-  (pos) => {
-    const { latitude, longitude } = pos.coords;
-    map.setCenter([longitude, latitude]);
-    new maplibregl.Marker({ color: 'red' })
-      .setLngLat([longitude, latitude])
-      .addTo(map);
-  },
-  () => {
-    const fallback = [139.7638, 35.6759]; // 有楽町
-    map.setCenter(fallback);
-    new maplibregl.Marker({ color: 'red' }).setLngLat(fallback).addTo(map);
-  }
-);
-
+// 現在地の取得（マップ読み込み後に実行）
 map.on('load', () => {
-  // 用途地域レイヤー
-  const fillLayers = [
-    { id: 'shougyou', file: './data/SHOUGYOU.geojson', color: 'rgb(255, 0, 0)' },              // 赤
-    { id: 'kinsho', file: './data/KINSHO.geojson', color: 'rgb(255, 182, 193)' },             // さくら色
-    { id: 'juusen', file: './data/JUUSEN.geojson', color: 'rgb(144, 238, 144)' }              // きみどり
+  navigator.geolocation.getCurrentPosition(
+    ({ coords }) => {
+      map.setCenter([coords.longitude, coords.latitude]);
+      new maplibregl.Marker({ color: 'red' })
+        .setLngLat([coords.longitude, coords.latitude])
+        .addTo(map);
+    },
+    () => {
+      const fallback = [139.7638, 35.6759]; // 有楽町 fallback
+      map.setCenter(fallback);
+      new maplibregl.Marker({ color: 'red' }).setLngLat(fallback).addTo(map);
+    }
+  );
+
+  // 用途地域（fillレイヤー）
+  const fills = [
+    { id: 'shougyou', file: './data/SHOUGYOU.geojson', color: 'rgb(255, 0, 0)', checkboxId: 'toggle-shougyou' },           // 赤
+    { id: 'kinsho',   file: './data/KINSHO.geojson',   color: 'rgb(255, 182, 193)', checkboxId: 'toggle-shougyou' },       // さくら
+    { id: 'juusen',   file: './data/JUUSEN_filtered.geojson', color: 'rgb(144, 238, 144)', checkboxId: 'toggle-jusen' },// きみどり
+    { id: 'junko',    file: './data/JUNKO.geojson',    color: 'rgb(128, 0, 128)',  checkboxId: 'toggle-kougyou' },         // 紫
+    { id: 'kougyo',   file: './data/KOUGYO.geojson',   color: 'rgb(0, 0, 0)',checkboxId: 'toggle-kougyou' }              // 黒
   ];
 
-  fillLayers.forEach(({ id, file, color }) => {
+  fills.forEach(({ id, file, color,checkboxId }) => {
     map.addSource(id, {
       type: 'geojson',
       data: file
@@ -58,44 +59,62 @@ map.on('load', () => {
         'fill-opacity': 0.4
       }
     });
+
+    document.getElementById(checkboxId).addEventListener('change', (e) => {
+      const visibility = e.target.checked ? 'visible' : 'none';
+      map.setLayoutProperty(`${id}-layer`, 'visibility', visibility);
+    });
+
   });
 
-  // SHINJUKU（青線）
-  map.addSource('shinjuku', {
-    type: 'geojson',
-    data: './data/SHINJUKU.geojson'
-  });
-  map.addLayer({
-    id: 'shinjuku-layer',
-    type: 'line',
-    source: 'shinjuku',
-    paint: {
-      'line-color': 'blue',
-      'line-width': 5
-    }
-  });
+  // エリア線（lineレイヤー）
+  const lines = [
+    { id: 'chiyoda',     file: './data/千代田区_boundary.geojson',    color: 'red',    checkboxId: 'toggle-23ku' },
+    { id: 'chuou',       file: './data/中央区_boundary.geojson',      color: 'blue',   checkboxId: 'toggle-23ku' },
+    { id: 'minato',      file: './data/港区_boundary.geojson',        color: 'green',  checkboxId: 'toggle-23ku' },
+    { id: 'shinjuku',    file: './data/新宿区_boundary.geojson',      color: 'yellow', checkboxId: 'toggle-23ku' },
+    { id: 'bunkyo',      file: './data/文京区_boundary.geojson',      color: 'purple', checkboxId: 'toggle-23ku' },
+    { id: 'taito',       file: './data/台東区_boundary.geojson',      color: 'orange', checkboxId: 'toggle-23ku' },
+    { id: 'sumida',      file: './data/墨田区_boundary.geojson',      color: 'pink',   checkboxId: 'toggle-23ku' },
+    { id: 'koto',        file: './data/江東区_boundary.geojson',      color: 'brown',  checkboxId: 'toggle-23ku' },
+    { id: 'shinagawa',   file: './data/品川区_boundary.geojson',      color: 'gray',   checkboxId: 'toggle-23ku' },
+    { id: 'meguro',      file: './data/目黒区_boundary.geojson',      color: 'cyan',   checkboxId: 'toggle-23ku' },
+    { id: 'ota',         file: './data/大田区_boundary.geojson',       color: 'lime',   checkboxId: 'toggle-23ku' },
+    { id: 'setagaya',    file: './data/世田谷区_boundary.geojson',    color: 'red',    checkboxId: 'toggle-23ku' },
+    { id: 'shibuya',     file: './data/渋谷区_boundary.geojson',      color: 'blue',   checkboxId: 'toggle-23ku' },
+    { id: 'nakano',      file: './data/中野区_boundary.geojson',      color: 'green',  checkboxId: 'toggle-23ku' },
+    { id: 'suginami',    file: './data/杉並区_boundary.geojson',      color: 'yellow', checkboxId: 'toggle-23ku' },
+    { id: 'toshima',     file: './data/豊島区_boundary.geojson',      color: 'purple', checkboxId: 'toggle-23ku' },
+    { id: 'kita',        file: './data/北区_boundary.geojson',        color: 'orange', checkboxId: 'toggle-23ku' },
+    { id: 'arakawa',     file: './data/荒川区_boundary.geojson',      color: 'pink',   checkboxId: 'toggle-23ku' },
+    { id: 'itabashi',    file: './data/板橋区_boundary.geojson',      color: 'brown',  checkboxId: 'toggle-23ku' },
+    { id: 'nerima',      file: './data/練馬区_boundary.geojson',      color: 'gray',   checkboxId: 'toggle-23ku' },
+    { id: 'adachi',      file: './data/足立区_boundary.geojson',      color: 'cyan',   checkboxId: 'toggle-23ku' },
+    { id: 'katsushika',  file: './data/葛飾区_boundary.geojson',      color: 'lime',   checkboxId: 'toggle-23ku' },
+    { id: 'edogawa',     file: './data/江戸川区_boundary.geojson',    color: 'red',    checkboxId: 'toggle-23ku' }
+  ];
+  
+  
+  
 
-  // SHIBUYA（赤線）
-  map.addSource('shibuya', {
-    type: 'geojson',
-    data: './data/SHIBUYA.geojson'
-  });
-  map.addLayer({
-    id: 'shibuya-layer',
-    type: 'line',
-    source: 'shibuya',
-    paint: {
-      'line-color': 'red',
-      'line-width': 5
-    }
-  });
+  lines.forEach(({ id, file, color ,checkboxId}) => {
+    map.addSource(id, {
+      type: 'geojson',
+      data: file
+    });
+    map.addLayer({
+      id: `${id}-layer`,
+      type: 'line',
+      source: id,
+      paint: {
+        'line-color': color,
+        'line-width': 5
+      }
+    });
 
-  // チェックボックス制御
-  document.getElementById('toggle-shinjuku').addEventListener('change', (e) => {
-    map.setLayoutProperty('shinjuku-layer', 'visibility', e.target.checked ? 'visible' : 'none');
-  });
-
-  document.getElementById('toggle-shibuya').addEventListener('change', (e) => {
-    map.setLayoutProperty('shibuya-layer', 'visibility', e.target.checked ? 'visible' : 'none');
+    document.getElementById(checkboxId).addEventListener('change', (e) => {
+      const visibility = e.target.checked ? 'visible' : 'none';
+      map.setLayoutProperty(`${id}-layer`, 'visibility', visibility);
+    });
   });
 });

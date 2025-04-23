@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>現在地マップ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    #map { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+  <script>
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://demotiles.maplibre.org/style.json',
+      center: [139.767, 35.681], // 東京駅
+      zoom: 14
+    });
+
+    map.addControl(new maplibregl.NavigationControl());
+
+    // 現在地を取得
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lng = position.coords.longitude;
+        const lat = position.coords.latitude;
+
+        // 地図を現在地に移動
+        map.setCenter([lng, lat]);
+
+        // 現在地マーカー
+        new maplibregl.Marker({ color: '#007AFF' })
+          .setLngLat([lng, lat])
+          .addTo(map);
+      },
+      (error) => {
+        alert('現在地を取得できませんでした: ' + error.message);
+      }
+    );
+  </script>
+</body>
+</html>

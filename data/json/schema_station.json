@@ -1,0 +1,77 @@
+﻿{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+
+	"type": "array",
+
+	"items" : {
+		"type": "object",
+		"properties": {
+			"@id": {
+				"type": "string"
+			},
+			"@type": {
+				"type": "string"
+			},
+			"dc:date": {
+				"type": "string"
+			},
+			"geo:lat": {
+				"type": "number"
+			},
+			"@context": {
+				"type": "string"
+			},
+			"dc:title": {
+				"type": "string"
+			},
+			"geo:long": {
+				"type": "number"
+			},
+			"owl:sameAs": {
+				"type": "string"
+			},
+			"odpt:railway": {
+				"type": "string"
+			},
+			"odpt:operator": {
+				"type": "string"
+			},
+			"odpt:stationCode": {
+				"type": "string"
+			},
+
+			"odpt:stationTitle": {
+				"type": "object",
+				"properties": {
+
+					"en": { "type": "string" },
+					"ja": { "type": "string" },
+					"ko": { "type": "string" },
+					"zh-Hans": { "type": "string" },
+					"zh-Hant": { "type": "string" }
+				}
+			},
+
+			"odpt:passengerSurvey": {
+				"type": "array",
+				"items": {
+					"type": "string"
+				}
+			},
+			"odpt:stationTimetable": {
+				"type": "array",
+				"items": {
+					"type": "string"
+				}
+			},
+			"odpt:connectingRailway": {
+				"type": "array",
+				"items": {
+					"type": "string"
+				}
+			}
+		}
+	}
+
+}
+

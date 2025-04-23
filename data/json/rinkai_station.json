@@ -1,0 +1,250 @@
+[
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B2E",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.63457,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "国際展示場",
+		"geo:long": 139.79163,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.KokusaiTenjijo",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R3",
+		"odpt:stationTitle": {
+			"en": "Kokusai-tenjijo",
+			"ja": "国際展示場",
+			"ko": "국제전시장",
+			"zh-Hans": "国际展示场",
+			"zh-Hant": "國際展示場"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.KokusaiTenjijo"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.KokusaiTenjijo.Inbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.KokusaiTenjijo.Inbound.SaturdayHoliday",
+			"odpt.StationTimetable:TWR.Rinkai.KokusaiTenjijo.Outbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.KokusaiTenjijo.Outbound.SaturdayHoliday"
+		],
+		"odpt:connectingRailway": [
+			"odpt.Railway:Yurikamome.Yurikamome"
+		]
+	},
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B32",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.60741,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "大井町",
+		"geo:long": 139.73474,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.Oimachi",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R7",
+		"odpt:stationTitle": {
+			"en": "Oimachi",
+			"ja": "大井町",
+			"ko": "오이마치",
+			"zh-Hans": "大井町",
+			"zh-Hant": "大井町"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.Oimachi"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.Oimachi.Inbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.Oimachi.Inbound.SaturdayHoliday",
+			"odpt.StationTimetable:TWR.Rinkai.Oimachi.Outbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.Oimachi.Outbound.SaturdayHoliday"
+		],
+		"odpt:connectingRailway": [
+			"odpt.Railway:JR-East.KeihinTohokuNegishi",
+			"odpt.Railway:Tokyu.Oimachi"
+		]
+	},
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B33",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.62002,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "大崎",
+		"geo:long": 139.7282,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.Osaki",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R8",
+		"odpt:stationTitle": {
+			"en": "Osaki",
+			"ja": "大崎",
+			"ko": "오사키",
+			"zh-Hans": "大崎",
+			"zh-Hant": "大崎"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.Osaki"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.Osaki.Inbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.Osaki.Inbound.SaturdayHoliday"
+		],
+		"odpt:connectingRailway": [
+			"odpt.Railway:JR-East.SaikyoKawagoe",
+			"odpt.Railway:JR-East.ShonanShinjuku",
+			"odpt.Railway:JR-East.SotetsuDirect",
+			"odpt.Railway:JR-East.Yamanote"
+		]
+	},
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B2C",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.64604,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "新木場",
+		"geo:long": 139.82678,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.ShinKiba",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R1",
+		"odpt:stationTitle": {
+			"en": "Shin-kiba",
+			"ja": "新木場",
+			"ko": "신키바",
+			"zh-Hans": "新木场",
+			"zh-Hant": "新木場"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.ShinKiba"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.ShinKiba.Outbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.ShinKiba.Outbound.SaturdayHoliday"
+		],
+		"odpt:connectingRailway": [
+			"odpt.Railway:JR-East.Keiyo",
+			"odpt.Railway:TokyoMetro.Yurakucho"
+		]
+	},
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B31",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.60897,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "品川シーサイド",
+		"geo:long": 139.74967,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.ShinagawaSeaside",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R6",
+		"odpt:stationTitle": {
+			"en": "Shinagawa Seaside",
+			"ja": "品川シーサイド",
+			"ko": "시나가와시사이드",
+			"zh-Hans": "品川海滨",
+			"zh-Hant": "品川海濱"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.ShinagawaSeaside"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.ShinagawaSeaside.Inbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.ShinagawaSeaside.Inbound.SaturdayHoliday",
+			"odpt.StationTimetable:TWR.Rinkai.ShinagawaSeaside.Outbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.ShinagawaSeaside.Outbound.SaturdayHoliday"
+		]
+	},
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B2D",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.6406,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "東雲",
+		"geo:long": 139.80328,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.Shinonome",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R2",
+		"odpt:stationTitle": {
+			"en": "Shinonome",
+			"ja": "東雲",
+			"ko": "시노노메",
+			"zh-Hans": "东云",
+			"zh-Hant": "東雲"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.Shinonome"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.Shinonome.Inbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.Shinonome.Inbound.SaturdayHoliday",
+			"odpt.StationTimetable:TWR.Rinkai.Shinonome.Outbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.Shinonome.Outbound.SaturdayHoliday"
+		]
+	},
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B30",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.62038,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "天王洲アイル",
+		"geo:long": 139.75084,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.TennozuIsle",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R5",
+		"odpt:stationTitle": {
+			"en": "Tennozu Isle",
+			"ja": "天王洲アイル",
+			"ko": "덴노즈아일",
+			"zh-Hans": "天王洲岛",
+			"zh-Hant": "天王洲島"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.TennozuIsle"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.TennozuIsle.Inbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.TennozuIsle.Inbound.SaturdayHoliday",
+			"odpt.StationTimetable:TWR.Rinkai.TennozuIsle.Outbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.TennozuIsle.Outbound.SaturdayHoliday"
+		],
+		"odpt:connectingRailway": [
+			"odpt.Railway:TokyoMonorail.HanedaAirport"
+		]
+	},
+	{
+		"@id": "urn:ucode:_00001C00000000000001000003102B2F",
+		"@type": "odpt:Station",
+		"dc:date": "2021-06-21T14:00:00+09:00",
+		"geo:lat": 35.62754,
+		"@context": "http://vocab.odpt.org/context_odpt.jsonld",
+		"dc:title": "東京テレポート",
+		"geo:long": 139.77885,
+		"owl:sameAs": "odpt.Station:TWR.Rinkai.TokyoTeleport",
+		"odpt:railway": "odpt.Railway:TWR.Rinkai",
+		"odpt:operator": "odpt.Operator:TWR",
+		"odpt:stationCode": "R4",
+		"odpt:stationTitle": {
+			"en": "Tokyo Teleport",
+			"ja": "東京テレポート",
+			"ko": "도쿄텔레포트",
+			"zh-Hans": "东京电讯",
+			"zh-Hant": "東京電訊"
+		},
+		"odpt:passengerSurvey": [
+			"odpt.PassengerSurvey:TWR.TokyoTeleport"
+		],
+		"odpt:stationTimetable": [
+			"odpt.StationTimetable:TWR.Rinkai.TokyoTeleport.Inbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.TokyoTeleport.Inbound.SaturdayHoliday",
+			"odpt.StationTimetable:TWR.Rinkai.TokyoTeleport.Outbound.Weekday",
+			"odpt.StationTimetable:TWR.Rinkai.TokyoTeleport.Outbound.SaturdayHoliday"
+		]
+	}
+]

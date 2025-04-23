@@ -1,0 +1,215 @@
+{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJLcS4BHyJGGARTeVD0yl-rcg",
+         "types" : [
+            "establishment",
+            "point_of_interest",
+            "subway_station",
+            "transit_station"
+         ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJ1UxPReWLGGARagE2MSfXh7g",
+         "types" : [
+            "establishment",
+            "point_of_interest",
+            "subway_station",
+            "train_station",
+            "transit_station"
+         ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 35.6747104,
+               "lng" : 139.777577
+            },
+            "southwest" : {
+               "lat" : 35.6592296,
+               "lng" : 139.7635781
+            }
+         },
+         "copyrights" : "Map data ©2022 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "2.4 km",
+                  "value" : 2379
+               },
+               "duration" : {
+                  "text" : "10分",
+                  "value" : 572
+               },
+               "end_address" : "日本、〒100-0006 東京都千代田区有楽町２丁目９ 有楽町駅",
+               "end_location" : {
+                  "lat" : 35.6747104,
+                  "lng" : 139.7635781
+               },
+               "start_address" : "日本、〒104-0054 東京都中央区勝どき２丁目１０−１５ 勝どき駅",
+               "start_location" : {
+                  "lat" : 35.6592296,
+                  "lng" : 139.7774449
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "15 m",
+                        "value" : 15
+                     },
+                     "duration" : {
+                        "text" : "1分",
+                        "value" : 10
+                     },
+                     "end_location" : {
+                        "lat" : 35.6593175,
+                        "lng" : 139.777577
+                     },
+                     "html_instructions" : "\u003cb\u003e北東\u003c/b\u003e方向に\u003cb\u003e清澄通り\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003e都道463号\u003c/b\u003eを進んで\u003cb\u003e晴海通り\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003e都道304号\u003c/b\u003eに向かう",
+                     "polyline" : {
+                        "points" : "eusxE_hctYACOW"
+                     },
+                     "start_location" : {
+                        "lat" : 35.6592296,
+                        "lng" : 139.7774449
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.5 km",
+                        "value" : 1475
+                     },
+                     "duration" : {
+                        "text" : "5分",
+                        "value" : 273
+                     },
+                     "end_location" : {
+                        "lat" : 35.669479,
+                        "lng" : 139.7671106
+                     },
+                     "html_instructions" : "\u003cb\u003e勝どき駅前（交差点）\u003c/b\u003e を\u003cb\u003e左折\u003c/b\u003eして \u003cb\u003e晴海通り\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003e都道304号\u003c/b\u003e に入る",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "wusxE{hctY_B~AsAnA[X{@t@SP]ZGDMLk@d@SRA@y@r@[Z[XURGD[XUTGD[XURGD[Z[XCBYTIFGFWVMLQRKJEHIJi@l@o@p@QRUT_@`@YX_@^QPONk@j@YVQPu@r@[Xc@b@_A~@s@r@OLiBxBA@o@|@[`@m@v@i@r@o@x@EDMNMNKNKJEFQRc@f@MPWVe@h@KLILSVIJSV"
+                     },
+                     "start_location" : {
+                        "lat" : 35.6593175,
+                        "lng" : 139.777577
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 km",
+                        "value" : 299
+                     },
+                     "duration" : {
+                        "text" : "1分",
+                        "value" : 64
+                     },
+                     "end_location" : {
+                        "lat" : 35.6716445,
+                        "lng" : 139.7687424
+                     },
+                     "html_instructions" : "\u003cb\u003e三原橋（交差点）\u003c/b\u003e を\u003cb\u003e右折\u003c/b\u003eして \u003cb\u003e都道316号\u003c/b\u003e に入る",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "guuxEmgatY[^OKg@c@wAmAcA{@WSiB}A}@y@"
+                     },
+                     "start_location" : {
+                        "lat" : 35.669479,
+                        "lng" : 139.7671106
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "86 m",
+                        "value" : 86
+                     },
+                     "duration" : {
+                        "text" : "1分",
+                        "value" : 33
+                     },
+                     "end_location" : {
+                        "lat" : 35.6721443,
+                        "lng" : 139.7680133
+                     },
+                     "html_instructions" : "\u003cb\u003e銀座東二丁目（交差点）\u003c/b\u003e を\u003cb\u003e左折\u003c/b\u003eして \u003cb\u003e銀座マロニエ通り\u003c/b\u003e に向かう",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "wbvxEsqatYk@|@GFo@jA"
+                     },
+                     "start_location" : {
+                        "lat" : 35.6716445,
+                        "lng" : 139.7687424
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 358
+                     },
+                     "duration" : {
+                        "text" : "2分",
+                        "value" : 124
+                     },
+                     "end_location" : {
+                        "lat" : 35.6742166,
+                        "lng" : 139.7649863
+                     },
+                     "html_instructions" : "\u003cb\u003e銀座マロニエ通り\u003c/b\u003eを進む",
+                     "polyline" : {
+                        "points" : "{evxEamatY_@l@{@vAW`@m@~@o@`AMPU`@U^W`@W`@EHKNGJCDSZQZCDGJCDIPEJ"
+                     },
+                     "start_location" : {
+                        "lat" : 35.6721443,
+                        "lng" : 139.7680133
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 146
+                     },
+                     "duration" : {
+                        "text" : "1分",
+                        "value" : 68
+                     },
+                     "end_location" : {
+                        "lat" : 35.6747104,
+                        "lng" : 139.7635781
+                     },
+                     "html_instructions" : "\u003cb\u003e銀座西二丁目（交差点）\u003c/b\u003e を直進する\u003cdiv style=\"font-size:0.9em\"\u003e目的地は前方左側です\u003c/div\u003e",
+                     "maneuver" : "straight",
+                     "polyline" : {
+                        "points" : "{rvxEez`tYKVELQf@GRKXCF?@ADARANAj@?NAF?D?DAB?BA@ADCBC@C@A@G?"
+                     },
+                     "start_location" : {
+                        "lat" : 35.6742166,
+                        "lng" : 139.7649863
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "eusxE_hctYQ[sDnDiC|BmD~CmHtGgDvD}D~D}BvBgDdDwDzEmCjD}BpCsA|AmAzAw@o@{CiCaCqB}@y@k@|@w@rA{AdCcCtDyBpDq@hA_@z@q@rBIvBGNQD"
+         },
+         "summary" : "晴海通り/都道304号",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
